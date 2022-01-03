@@ -2,7 +2,8 @@ body{
     background-image: src;
     display: flex;
     color: seashell;
-    justify-content: center;
+    align-items: center;
+    justify-content: end;
 }
 #background-image {
     position: fixed;
@@ -18,7 +19,7 @@ body{
 aside{
     max-width: 180px;
     position: sticky;
-    left: 100px;
+    left: 130px;
     right: 0;
     top: 5px;
     bottom: 0;
@@ -75,10 +76,10 @@ main{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
  
-.block, .footer, #navblock {
+.block, .footer{
     --main-color: rgb(77, 105, 83);
     display: inline-flex;
     flex-wrap: wrap;
@@ -97,7 +98,6 @@ main{
     top: 0;
     bottom: 0;
     z-index: 4;
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -123,7 +123,7 @@ main{
 section{
     justify-content: left;
     margin-left: 20px;}
-header{
+h2{
     margin-left: 20px;
     margin-top: 10px;
     font-size: 20px;
@@ -142,18 +142,22 @@ h3, h2, h1, .menu{
 p, span, section{
     text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
 }
-p,pre{
+p{
     padding: 5px 0px 5px 20px;
     overflow: scroll;
 }
-
-#about span {
-    padding: 10px;
+pre{
+    margin: 10px 0;
+    padding: 0;
+    overflow: scroll;
 }
 
-main .block:hover {
+#about span{
+    padding: 10px;
+}
+main .block:hover{
     z-index: 5;
-    -webkit-transform: scale(1.2);
+-webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   box-shadow:  0 0 10px 8px rgb(95, 243, 102);
@@ -165,26 +169,31 @@ aside:hover, footer:hover{
   box-shadow:  0 0 10px 8px rgb(95, 243, 102);
   background-color: rgb(8, 8, 1);
   transition: box-shadow 1s, background-color 1s;
-
-
 }
 
 #education li{
     margin-right: 35px;
-    margin-bottom: 10px;
 }
 #education{
     display: flex;
     flex-direction: column;
 }
+#projects{
+    display: flex;
+    flex-direction: column;
+}
+.project{
+    padding: 15px 0 15px 20px;
+}
 #scills li{
     margin-right: 30px;
     margin-bottom: 10px;
 }
-.thscills{
+.thscills, .edulist{
     width: fit-content;
     display: inline-flex;
     flex-wrap: wrap;
+    margin: 10px 0;
 }
 #languages {
     width: 100%;
@@ -234,16 +243,16 @@ aside:hover, footer:hover{
 a{
     color: rgba(243, 187, 114, 0.767);
 }
-
 #navblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     position: sticky;
-    left: 80vh;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    z-index: 7;
-    width: 20%;
-    }
+    top: 90%;
+    left: 80%;
+    width: 20vh;
+    height: 100%
+}
 
 
 @media screen  and (max-width: 1000px) {
@@ -254,7 +263,7 @@ a{
     width: 20%;
     }
 
-    .block, .footer {
+    .block, .footer, {
         width: 80%;
     }
     aside, main{
