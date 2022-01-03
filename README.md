@@ -1,1 +1,0 @@
-https://Masha12121212.github.io/rsschool-cv/
