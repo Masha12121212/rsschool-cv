@@ -269,5 +269,8 @@ a{
     aside, main{
         margin: 1px;
     }
+    .background-image{
+        width: auto;
+    }
 
 }
