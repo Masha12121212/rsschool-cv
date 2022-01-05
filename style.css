@@ -1,10 +1,26 @@
 body{
-    background-image: src;
-    display: flex;
     color: seashell;
-    align-items: center;
-    justify-content: end;
+    --main-color: rgb(77, 105, 83);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10px;
+    height: 100vh;
+    width: 100vw;
+    background-color: green;
+    border: 2px solid  yellow;
+    flex-direction: row;
+    justify-content: center;
 }
+h2, h3 {
+    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+}
+
 #background-image {
     position: fixed;
     top: 0;
@@ -16,261 +32,455 @@ body{
     background: no-repeat #121b12;
     background-size: cover;
 }
-aside{
-    max-width: 180px;
-    position: sticky;
-    left: 130px;
-    right: 0;
-    top: 5px;
-    bottom: 0;
-    z-index: 4;
-    height: 93vh;
-}
-.contacts img {
-    width: 30px;
-    margin: 20px;
-}
 
-aside, .contacts, .phone{
-    display: flex; 
+/* aside style */
+
+aside {
+    height: 90vh;
+    width: 30%;
+    margin: 0px;
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+}
+#aside-content{
+    margin: 15px 10px 10px 10px;
+    font-size: 14px;
+    width: fit-content;
+    min-width: 30%;
+    max-width: 50%;
+    border-radius: 30px;
+    display: flex;
     flex-direction: column;
     justify-content: start;
+   flex-wrap: nowrap;
+   overflow: auto;
 }
-.phone{
-    margin: 0px 0px 0px 0px;
-    align-items: center;
+#aside-title, #aside-title h2, #contacts, .phone,
+#phoneico{
+    width: 100px;
 }
-#pnumber{
-    font-size: 14px;
-    margin: 0px;
-    padding: 7px;
-    border: 2px solid seashell;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    height:min-content;
-}
-.contacts div{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: left;
-}
-#phoneico {
-    width: 38px;
-    margin-left: 15px;
-    margin-right: 2px;
-}
-
-#aside-title{
-    font-size: 16px;
-    margin: 20px 5px 10px 5px;
-    padding: 5px;
-}
-main{
-    position: static;
-    left: 100px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    /* justify-content: center; */
-}
- 
-.block, .footer{
-    --main-color: rgb(77, 105, 83);
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: 5px 30px 10px 30px;
-    padding: 10px;
-    border-radius: 30px;
-    z-index: 3;
-    background-color: rgb(8, 8, 1, 0.5);
-    box-shadow:  0 0 10px 8px var(--main-color);
-    width: 60%;
-}
-#fixed_menu{
-    position: sticky;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    margin: 5px 30px 10px 30px;
-    padding: 10px;
-    border-radius: 30px;
-    width: 60%;
-}
-
 #head{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.photo img{
+    opacity: 1;
+    border-radius: 20px;
+    width: 80%;
+    margin: 0;
+    padding: auto;
+}
+.photo{
+    display: flex;
     justify-content: center;
-    width: 100%;
-    background-color: rgb(8, 8, 1, 0.9);
+   
 }
-#photo{
-    border-radius: 50px;
-    margin: 10px 30px;
-    box-shadow:  0 0 10px 8px var(--main-color);
-    max-width: 15%;
-}
-section{
-    justify-content: left;
-    margin-left: 20px;}
-h2{
-    margin-left: 20px;
-    margin-top: 10px;
-    font-size: 20px;
-    margin-bottom: 5px
+h1{
+    font-size: 24px;
+    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+    padding: auto;
+    
 }
 h4{
-    font-size: 20px;
-}
-h3{
-    font-size: 14px;
-    margin: 0;
-}
-h3, h2, h1, .menu{
     text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+    margin: auto;
+    padding: auto;
 }
-p, span, section{
-    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+h2, h4{
+    font-size: 20px;}
+
+.contacts-area{
+    margin-top: 20%;
+    align-content: center;
+
+  
 }
-p{
-    padding: 5px 0px 5px 20px;
-    overflow: scroll;
-}
-pre{
-    margin: 10px 0;
-    padding: 0;
-    overflow: scroll;
+#contacts{
+    display: flex;
+    flex-direction: column;
+   justify-content: space-around;
+    margin-top: -10px;
+    flex-wrap: wrap;
 }
 
-#about span{
-    padding: 10px;
+aside img{ 
+    width: 20px;
+    margin: 20px 10px 0px 0px;
+    opacity: 0.8;
 }
-main .block:hover{
-    z-index: 5;
--webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+#contacts img{
+    margin-left: 15px;
+}
+#phoneico{
+    width: 40px;
+}
+#phoneico, #phone{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+}
+#pnumber{
+    position: static;
+    display: none;
+    margin: 5px 5px;
+    padding: 3px;
+    align-content: center;
+    border: 2px solid oldlace;
+    border-radius: 10px;
+    width: 70px;
+    z-index: 8;
+    justify-content: end;
+    background-color: black;
+} 
+
+#phoneico:hover #pnumber{
+    display: block;
+    transform: scale (1.5);
+    opacity: 1;
+} 
+
+
+/* head */
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height: 90vh;
+    overflow: auto;
+    width: 70%;
+    z-index: 1;
+}
+main .block{
+    width: 65%;
+    margin: 15px 15px 5px 15px;
+    padding: 30px;
+    
+}
+
+#fixed-menu{
+    width: 75%;
+    position: sticky;
+    top: 15px;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    
+}
+
+#fixed-menu .block{
+    background-color: rgb(8, 8, 1, 0.9);
+}
+
+#fixed-menu{
+ margin: 4px 0px 15px 0px;
+ font-size: 14px;
+ flex-wrap: wrap;
+ font-size: 20px;
+}
+ul{
+ padding: 0px;
+ margin-bottom: 30px;
+ display: flex;
+ flex-direction: row;
+ justify-content: stretch;
+ flex-wrap: wrap;
+}
+
+#fixed-menu li, #fixed-menu a{
+    width: fit-content;
+    color: seashell;
+    text-decoration: none;
+    padding: 5px;
+    margin: 3px ;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+#fixed-menu .block:hover{
+    z-index: 7;
+    -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
   box-shadow:  0 0 10px 8px rgb(95, 243, 102);
   background-color: rgb(8, 8, 1);
   transition: transform 2s,  -ms-transform 2s, webkit-transform 2s, z-index 2s, box-shadow 1s, background-color 1s;
 }
 
-aside:hover, footer:hover{
-  box-shadow:  0 0 10px 8px rgb(95, 243, 102);
-  background-color: rgb(8, 8, 1);
-  transition: box-shadow 1s, background-color 1s;
+/* about */
+
+main header, span, ul{
+    margin: 0 0 0 10px;
+    padding: 0px;
+    height: fit-content;
+}
+.block h2{
+    margin: 0 0 8px 0;
+    padding: 0;
+
+}
+/* education */
+
+#education{
+display: block;
+}
+#education ul{
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
 }
 
-#education li{
-    margin-right: 35px;
-}
-#education{
-    display: flex;
-    flex-direction: column;
-}
+/* projects */
+
 #projects{
     display: flex;
     flex-direction: column;
 }
-.project{
-    padding: 15px 0 15px 20px;
-}
-#scills li{
-    margin-right: 30px;
-    margin-bottom: 10px;
-}
-.thscills, .edulist{
-    width: fit-content;
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: 10px 0;
-}
-#languages {
-    width: 100%;
-    padding: 10px;
-    display: inline-flex;
-    justify-content: center;
-} 
-
-#languages img{
-    width: 15%;
-}
-
-#languages div{
+#projects span{
     display: flex;
-    width: 160px;
-    height: 25px;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: left;
 }
-
-
-#rs-logo{
-    background-color: rgba(219, 159, 132, 0.3);
-    border-radius: 10px;
-    padding: 5px;
-    width: 100px;
+#projects a{
+    color: rgb(179, 131, 131);
 }
-.footer{
-    padding: 10px 20px;
-    display: inline-flex;
-    justify-content: space-around;
-    align-items: center;
-}
-#footer-content{
-    min-height: 50px;
-}
-
-#git-account{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-basis: content;
-    min-height: 50px;
-    max-width: 150px;
-
-}
-a{
-    color: rgba(243, 187, 114, 0.767);
-}
-#navblock {
+/* tech scills */
+#scills{
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    position: sticky;
-    top: 90%;
-    left: 80%;
-    width: 20vh;
-    height: 100%
 }
+#scills ul{
+   padding: 15px;
 
+}
+#scills li{
+    list-style-type: none;
+    padding-top: 8px;
+}
+/* code example */
+pre{
+    margin: 10px 0;
+    padding: 0;
+    overflow: scroll;
+}
+/* languages */
+#lang{
+    display: flex;
+    flex-direction: column;
+}
+#languages{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#languages div{
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+}
+ 
+a{
+    text-decoration: none;
+    color: seashell;
+    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+}
+p, section, span{
+    font-size: 16px;
+    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+}
+.block{
+        padding: 15px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        border-radius: 30px;
+        background-color: rgb(8, 8, 1, 0.5);
+        box-shadow:  0 0 10px 8px var(--main-color);
+    }
+main .block:hover{
+    box-shadow:  0 0 10px 8px rgb(95, 243, 102);
+    background-color: rgb(8, 8, 1);
+    transition: transform 2s,  -ms-transform 2s, webkit-transform 2s, z-index 2s, box-shadow 1s, background-color 1s;
+}
+#aside-content:hover, footer:hover{
+    box-shadow:  0 0 10px 8px rgb(95, 243, 102);
+    background-color: rgb(8, 8, 1);
+    transition: box-shadow 1s, background-color 1s;
+    }
+/* footer */
 
-@media screen  and (max-width: 1000px) {
-    main{
-        margin: 5px;
-    }
-    #photo{
-    width: 20%;
-    }
+.footer{
+    margin: 7px 7px 7px -80px;
+    padding: 5px 15px 0 15px;
+    width: 70%;
+    height: 15vh;
+    background-color: rgb(8, 8, 1, 0.5);
+    box-shadow:  0 0 10px 8px var(--main-color);
+    display: inline-flex;
+    justify-content: space-around;
+    border-radius: 30px;
+    z-index: 1;
+    
+}
+.footer #rs-logo img{
+    background-color: rgba(147, 185, 151, 0.5);
+}
+#year{
+    font-size: 24px;
+    margin-top: 5px;
+    text-shadow:  0 0 10px rgb(9, 236, 58),0 0 20px rgb(73, 116, 99),0 0 30px rgb(73, 116, 99),0 0 100px rgb(73, 116, 99);
 
-    .block, .footer, {
-        width: 80%;
-    }
-    aside, main{
-        margin: 1px;
-    }
-    .background-image{
+}
+#rs-logo{
+    width: 90px;
+}
+ 
+
+@media only screen and (max-width: 800px){
+    body{
+        position: static;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
         width: auto;
+        align-items: center;
+    }
+    aside{
+        justify-content: center;
+        display: inline-flex;
+        position: static;
+        height: 25vh;
+        width: 100%
+        
+    }
+    #aside-content{
+        margin: 5px;
+        width: 90%;
+        display: inline-flex;
+        min-width: 90%;
+        max-width: 90%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+    .photo img{
+        width: 50px;
+        padding: 0;
+        
+    }
+  
+    .photo{
+        width: content;
+        margin: 0;
+        padding: 0 15px 0 0;
+    }
+    h1, h4{
+        font-size: 14px;
+        margin: 0px;
+        padding-bottom: 3px;
+    }
+    #head{
+        width: 60vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    .phone{
+        width: 30%;
+    }
+    .contacts-area, #contacts{
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 0 5px;
+        padding:0;
+        width: 30vw;
+        justify-content: center;
+    }
+    .contacts-area a{
+        margin: 0 5px 0 0;
+        padding: 0;
+        width: 22px;
+    }
+    .contacts-area img{
+        width: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    #phoneico{
+        width: 30px;
+    }
+    aside img{
+        margin: 0;
+    }
+    .contacts-area header{
+        display: none ;
     }
 
+    #fixed-menu{
+        font-size: 14px;
+        flex-wrap: nowrap;
+    }
+    main{
+        height: fit-content;
+        width: 100%;
+        align-items: center;
+    }
+    .block{
+        width: 100%;
+    }
+   #fixed-menu{
+       position: static;
+       width: 100%;
+   }
+   #fixed-menu li{
+       font-size: 12px;
+       padding: 1px;
+
+   }
+   #fixed-menu .block:hover{
+    z-index: 7;
+    -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  box-shadow:  0 0 10px 8px rgb(95, 243, 102);
+  background-color: rgb(8, 8, 1);
+  transition: none;
 }
+   .edulist, .edulist div{
+       display: flex;
+       flex-direction: column;
+       margin: 5px;
+       padding: 5px;
+       justify-content: left;
+   }
+   .edulist li{
+       padding-left: 0px;
+   }
+   .project{
+      margin-left: -10px;
+   }
+   .thscills{
+       justify-content: space-between;
+       margin-left: -10px;
+   }
+   #languages{
+       display: block;
+   }
+   .footer{
+       width: 90%;
+       margin: 10px 0 0 0;
+
+   }
+
+    
+}
+
+
+
