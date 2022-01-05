@@ -1,6 +1,7 @@
 body{
     color: seashell;
-    --main-color: rgb(77, 105, 83);
+    --main-color: rgb(101, 133, 131);
+    --text-shadow: 0 0 10px var(--main-color),0 0 10px rgb(16, 31, 31),0 0 20px rgb(20, 109, 72),0 0 40px rgb(31, 157, 207);
     position: fixed;
     left: 0;
     right: 0;
@@ -18,7 +19,11 @@ body{
     justify-content: center;
 }
 h2, h3 {
-    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+    text-shadow:  var(--text-shadow);
+}
+#background-image img{
+    width: 100%;
+    height: 100%;
 }
 
 #background-image {
@@ -72,20 +77,23 @@ aside {
     width: 80%;
     margin: 0;
     padding: auto;
+    box-shadow:  0 0 10px 8px var(--main-color);
 }
 .photo{
     display: flex;
     justify-content: center;
+    
    
 }
 h1{
     font-size: 24px;
-    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+    text-shadow:  var(--text-shadow);
     padding: auto;
+    font-weight: bold;
     
 }
 h4{
-    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+    text-shadow: var(--text-shadow);
     margin: auto;
     padding: auto;
 }
@@ -175,7 +183,7 @@ main .block{
 }
 
 #fixed-menu .block{
-    background-color: rgb(8, 8, 1, 0.9);
+    background-color: rgba(3, 3, 3, 0.9);
 }
 
 #fixed-menu{
@@ -285,23 +293,26 @@ pre{
     width: 150px;
     height: 30px;
 }
+#languages img{
+    width: 15%;
+}
  
 a{
     text-decoration: none;
     color: seashell;
-    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+    text-shadow: var(--text-shadow);
 }
 p, section, span{
     font-size: 16px;
-    text-shadow:  0 0 10px var(--main-color),0 0 20px red,0 0 30px red,0 0 40px red;
+    text-shadow: var(--text-shadow);
 }
 .block{
-        padding: 15px;
-        display: inline-flex;
-        flex-wrap: wrap;
-        border-radius: 30px;
-        background-color: rgb(8, 8, 1, 0.5);
-        box-shadow:  0 0 10px 8px var(--main-color);
+    padding: 15px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    background-color: rgba(3, 3, 3, 0.5);
+    box-shadow:  0 0 10px 8px var(--main-color);
     }
 main .block:hover{
     box-shadow:  0 0 10px 8px rgb(95, 243, 102);
@@ -320,7 +331,7 @@ main .block:hover{
     padding: 5px 15px 0 15px;
     width: 70%;
     height: 15vh;
-    background-color: rgb(8, 8, 1, 0.5);
+    background-color: rgba(3, 3, 3, 0.5);
     box-shadow:  0 0 10px 8px var(--main-color);
     display: inline-flex;
     justify-content: space-around;
@@ -334,11 +345,13 @@ main .block:hover{
 #year{
     font-size: 24px;
     margin-top: 5px;
-    text-shadow:  0 0 10px rgb(9, 236, 58),0 0 20px rgb(73, 116, 99),0 0 30px rgb(73, 116, 99),0 0 100px rgb(73, 116, 99);
-
+    text-shadow: var(--text-shadow);
 }
 #rs-logo{
     width: 90px;
+}
+#git-account img{
+    width: 50px;
 }
  
 
