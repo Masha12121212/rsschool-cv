@@ -113,6 +113,10 @@ h2, h4{
     margin-top: -10px;
     flex-wrap: wrap;
 }
+#contacts li{
+    list-style-type: none;
+
+}
 
 aside img{ 
     width: 20px;
